@@ -314,7 +314,7 @@ const ConfirmModalInternal = ({
               <ConfirmModalToAddr key={t.to} toaddr={t} info={info} />
             ))}
           </div>
-          <ConfirmModalToAddr toaddr={{ to: 'Fee', amount: 0.0001, memo: null }} info={info} />
+          <ConfirmModalToAddr toaddr={{ to: 'Fee', amount: RPC.getDefaultFee(), memo: null }} info={info} />
         </ScrollPane>
 
         <div className={cstyles.buttoncontainer}>

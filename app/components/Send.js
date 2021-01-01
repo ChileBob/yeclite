@@ -106,7 +106,7 @@ const ToAddrBox = ({
         </div>
         <input
           type="text"
-          placeholder="Z or T address"
+          placeholder="y or s address"
           className={cstyles.inputbox}
           value={toaddr.to}
           onChange={e => updateToField(toaddr.id, e, null, null)}
@@ -525,7 +525,7 @@ export default class Send extends PureComponent<Props, SendState> {
     // If there are unverified funds, then show a tooltip
     let tooltip: string = '';
     if (totalBalance.unverifiedPrivate) {
-      tooltip = `Waiting for confirmation of ZEC ${totalBalance.unverifiedPrivate} with 5 blocks (approx 6 minutes)`;
+      tooltip = `Waiting for confirmation of YEC ${totalBalance.unverifiedPrivate} with 2 blocks (approx 5 minutes)`;
     }
 
     return (

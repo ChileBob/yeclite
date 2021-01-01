@@ -1,8 +1,8 @@
 {
-  "name": "zecwallet-lite",
-  "productName": "Zecwallet Lite",
-  "version": "1.4.0",
-  "description": "Zecwallet Lite (Electron version)",
+  "name": "yeclite",
+  "productName": "YecLite",
+  "version": "1.4.1",
+  "description": "YecLite (Electron version)",
   "scripts": {
     "build": "yarn neon && concurrently \"yarn build-main\" \"yarn build-renderer\"",
     "build-dll": "cross-env NODE_ENV=development webpack --config ./configs/webpack.config.renderer.dev.dll.babel.js --colors",
@@ -54,8 +54,8 @@
     ]
   },
   "build": {
-    "productName": "Zecwallet Lite",
-    "appId": "co.zecwallet.lite",
+    "productName": "YecLite",
+    "appId": "dev.yec.yeclite",
     "afterAllArtifactBuild": "./afterSignHook.js",
     "files": [
       "dist/",
@@ -115,8 +115,8 @@
         "AppImage"
       ],
       "desktop": {
-        "Name": "ZecWallet Lite",
-        "Comment": "Shielded Lightclient for Zcash",
+        "Name": "YecLite",
+        "Comment": "Shielded Lightclient for Ycash",
         "GenericName": "Wallet",
         "Type": "Application",
         "StartupNotify": true,
@@ -133,12 +133,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adityapk00/zecwallet-electron.git"
+    "url": "git+https://github.com/yecdev/yeclite.git"
   },
   "author": {
-    "name": "Aditya Kulkarni",
-    "email": "aditya@zecwallet.co",
-    "url": "https://zecwallet.co"
+    "name": "yecdev",
+    "email": "dev@yec.dev",
+    "url": "https://y.cash"
   },
   "contributors": [
     {
@@ -149,7 +149,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/adityapk00/zecwallet-electron/issues"
+    "url": "https://github.com/yecdev/yeclite/issues"
   },
   "keywords": [
     "electron",
@@ -162,7 +162,7 @@
     "hot",
     "reload"
   ],
-  "homepage": "https://github.com/adityapk00/zecwallet-electron#readme",
+  "homepage": "https://github.com/yecdev/yeclite",
   "jest": {
     "testURL": "http://localhost/",
     "moduleNameMapper": {

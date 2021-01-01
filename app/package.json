@@ -1,13 +1,13 @@
 {
-  "name": "zecwallet-lite",
-  "productName": "Zecwallet Lite",
+  "name": "yeclite",
+  "productName": "YecLite",
   "version": "1.4.0",
-  "description": "Zecwallet Lite",
+  "description": "YecLite",
   "main": "./main.prod.js",
   "author": {
-    "name": "Aditya Kulkarni",
-    "email": "aditya@zecwallet.co",
-    "url": "https://github.com/adityapk00/zecwallet-electron"
+    "name": "yecdev developers",
+    "email": "dev@yec.dev",
+    "url": "https://github.com/yecdev/yeclite"
   },
   "scripts": {
     "electron-rebuild": "node -r ../internals/scripts/BabelRegister.js ../internals/scripts/ElectronRebuild.js",

@@ -6,12 +6,12 @@ export const NO_CONNECTION: string = 'Could not connect to zcashd';
 export default class Utils {
   static isSapling(addr: string): boolean {
     if (!addr) return false;
-    return new RegExp('^z[a-z0-9]{77}$').test(addr) || new RegExp('^ztestsapling[a-z0-9]{76}$').test(addr);
+    return new RegExp('^y[a-z0-9]{77}$').test(addr) || new RegExp('^ytestsapling[a-z0-9]{76}$').test(addr);
   }
 
   static isSprout(addr: string): boolean {
     if (!addr) return false;
-    return new RegExp('^z[a-zA-Z0-9]{94}$').test(addr);
+    return new RegExp('^y[a-zA-Z0-9]{94}$').test(addr);
   }
 
   static isZaddr(addr: string): boolean {
@@ -21,7 +21,7 @@ export default class Utils {
 
   static isTransparent(addr: string): boolean {
     if (!addr) return false;
-    return new RegExp('^t[a-zA-Z0-9]{34}$').test(addr);
+    return new RegExp('^s[a-zA-Z0-9]{34}$').test(addr);
   }
 
   static isValidSaplingPrivateKey(key: string): boolean {
@@ -118,7 +118,7 @@ export default class Utils {
     if (testnet) {
       return 'ztestsapling1wn6889vznyu42wzmkakl2effhllhpe4azhu696edg2x6me4kfsnmqwpglaxzs7tmqsq7kudemp5';
     } else {
-      return 'zs1gv64eu0v2wx7raxqxlmj354y9ycznwaau9kduljzczxztvs4qcl00kn2sjxtejvrxnkucw5xx9u';
+      return 'ys15w4fpkkcq3e22z2mgxhrcnduzssuufx3ax3k86ruvzp30lelkxmmym4l98xcwtwpjyh5sffq6ea';
     }
   }
 
@@ -127,7 +127,7 @@ export default class Utils {
   }
 
   static getDefaultDonationMemo(testnet: boolean): string {
-    return 'Thanks for supporting Zecwallet!';
+    return 'Donation to support Ycash development work by yecdev team.';
   }
 
   static getZecToUsdString(price: number | null, zecValue: number | null): string {

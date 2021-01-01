@@ -259,9 +259,10 @@ class Sidebar extends PureComponent<Props, State> {
     // About
     ipcRenderer.on('about', () => {
       openErrorModal(
-        'Zecwallet Lite',
+        'YecLite',
         <div className={cstyles.verticalflex}>
-          <div className={cstyles.margintoplarge}>Zecwallet Lite v1.4.0</div>
+          <div className={cstyles.margintoplarge}>YecLite v1.4.1</div>
+          <div className={cstyles.margintoplarge}>Copyright (c) 2020, yecdev developers.</div>
           <div className={cstyles.margintoplarge}>Built with Electron. Copyright (c) 2018-2020, Aditya Kulkarni.</div>
           <div className={cstyles.margintoplarge}>
             The MIT License (MIT) Copyright (c) 2018-2020 Zecwallet
@@ -338,7 +339,7 @@ class Sidebar extends PureComponent<Props, State> {
     ipcRenderer.on('exportalltx', async () => {
       const save = await remote.dialog.showSaveDialog({
         title: 'Save Transactions As CSV',
-        defaultPath: 'zecwallet_transactions.csv',
+        defaultPath: 'yeclite_transactions.csv',
         filters: [{ name: 'CSV File', extensions: ['csv'] }],
         properties: ['showOverwriteConfirmation']
       });

@@ -5,7 +5,7 @@ import { Info, RPCConfig } from './AppState';
 import cstyles from './Common.module.css';
 import styles from './Zcashd.module.css';
 import ScrollPane from './ScrollPane';
-import Heart from '../assets/img/zcashdlogo.gif';
+import Heart from '../assets/img/ycashdlogo.png';
 
 const DetailLine = ({ label, value }) => {
   return (

@@ -58,10 +58,10 @@ export default class MenuBuilder {
     const { mainWindow } = this;
 
     const subMenuAbout = {
-      label: 'Zecwallet Lite',
+      label: 'YecLite',
       submenu: [
         {
-          label: 'About Zecwallet Lite',
+          label: 'About YecLite',
           selector: 'orderFrontStandardAboutPanel:',
           click: () => {
             mainWindow.webContents.send('about');
@@ -71,7 +71,7 @@ export default class MenuBuilder {
         { label: 'Services', submenu: [] },
         { type: 'separator' },
         {
-          label: 'Hide Zecwallet Lite',
+          label: 'Hide YecLite',
           accelerator: 'Command+H',
           selector: 'hide:'
         },
@@ -274,13 +274,13 @@ export default class MenuBuilder {
         {
           label: 'Check github.com for updates',
           click() {
-            shell.openExternal('https://github.com/adityapk00/zecwallet-lite/releases');
+            shell.openExternal('https://github.com/yecdev/yeclite/releases');
           }
         },
         {
           label: 'File a bug...',
           click() {
-            shell.openExternal('https://github.com/adityapk00/zecwallet-lite/issues');
+            shell.openExternal('https://github.com/yecdev/yeclite/issues');
           }
         }
       ]
@@ -391,7 +391,7 @@ export default class MenuBuilder {
         label: 'Help',
         submenu: [
           {
-            label: 'About Zecwallet Lite',
+            label: 'About YecLite',
             click: () => {
               mainWindow.webContents.send('about');
             }
@@ -405,13 +405,13 @@ export default class MenuBuilder {
           {
             label: 'Check github.com for updates',
             click() {
-              shell.openExternal('https://github.com/adityapk00/zecwallet-lite/releases');
+              shell.openExternal('https://github.com/yecdev/yeclite/releases');
             }
           },
           {
             label: 'File a bug...',
             click() {
-              shell.openExternal('https://github.com/adityapk00/zecwallet-lite/issues');
+              shell.openExternal('https://github.com/yecdev/yeclite/issues');
             }
           }
         ]

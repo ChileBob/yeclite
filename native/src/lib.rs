@@ -10,6 +10,9 @@ use std::thread;
 
 use zecwalletlitelib::{commands, lightclient::{LightClient, LightClientConfig}};
 
+pub const DEFAULT_WALLET_FILENAME: &str    = "yeclite_wallet.dat";
+pub const DEFAULT_LOG_FILENAME: &str   = "yeclite_debug.log";
+
 // We'll use a MUTEX to store a global lightclient instance,
 // so we don't have to keep creating it. We need to store it here, in rust
 // because we can't return such a complex structure back to JS
@@ -21,7 +24,9 @@ lazy_static! {
 export! {
   // Check if there is an existing wallet
   fn litelib_wallet_exists(chain_name: String) -> bool {
-      let config = LightClientConfig::create_unconnected(chain_name, None);
+      let config = LightClientConfig::create_unconnected(chain_name, None,
+        Some(DEFAULT_WALLET_FILENAME.to_string()),
+        Some(DEFAULT_LOG_FILENAME.to_string()));
 
       config.wallet_exists()
   }
@@ -29,7 +34,9 @@ export! {
   /// Create a new wallet and return the seed for the newly created wallet.
   fn litelib_initialize_new(server_uri: String) -> String {
       let server = LightClientConfig::get_server_or_default(Some(server_uri));
-      let (config, latest_block_height) = match LightClientConfig::create(server) {
+      let (config, latest_block_height) = match LightClientConfig::create(server,
+        None, Some(DEFAULT_WALLET_FILENAME.to_string()),
+        Some(DEFAULT_LOG_FILENAME.to_string())) {
           Ok((c, h)) => (c, h),
           Err(e) => {
               return format!("Error: {}", e);
@@ -63,7 +70,9 @@ export! {
   fn litelib_initialize_new_from_phrase(server_uri: String,
               seed: String, birthday: u64, overwrite: bool) -> String {
       let server = LightClientConfig::get_server_or_default(Some(server_uri));
-      let (config, _latest_block_height) = match LightClientConfig::create(server) {
+      let (config, _latest_block_height) = match LightClientConfig::create(server, 
+        None, Some(DEFAULT_WALLET_FILENAME.to_string()), Some(DEFAULT_LOG_FILENAME.to_string())
+      ) {
           Ok((c, h)) => (c, h),
           Err(e) => {
             return format!("Error: {}", e);
@@ -88,7 +97,9 @@ export! {
   // Initialize a new lightclient and store its value
   fn litelib_initialize_existing(server_uri: String) -> String {
       let server = LightClientConfig::get_server_or_default(Some(server_uri));
-      let (config, _latest_block_height) = match LightClientConfig::create(server) {
+      let (config, _latest_block_height) = match LightClientConfig::create(server,
+        None, Some(DEFAULT_WALLET_FILENAME.to_string()),
+        Some(DEFAULT_LOG_FILENAME.to_string())) {
           Ok((c, h)) => (c, h),
           Err(e) => {
             return format!("Error: {}", e);

@@ -28,15 +28,11 @@ export default function ServerSelectModal({ modalIsOpen, closeModal, openErrorMo
     closeModal();
 
     setTimeout(() => {
-      openErrorModal('Restart Zecwallet Lite', 'Please restart Zecwallet Lite to connect to the new server');
+      openErrorModal('Restart YecLite', 'Please restart YecLite to connect to the new server');
     }, 10);
   };
 
-  const servers = [
-    { name: 'Zecwallet (Default)', uri: 'https://lightwalletd.zecwallet.co:1443' },
-    { name: 'Zecwallet (Backup)', uri: 'https://lightd-main.zecwallet.co:443' },
-    { name: 'ZcashFR (Community)', uri: 'https://lightd-main.zcashfr.io:443' }
-  ];
+  const servers = [{ name: 'Ycash Foundation lightwalletd2 (Default)', uri: 'https://lightwalletd2.ycash.x:1443' }];
 
   return (
     <Modal

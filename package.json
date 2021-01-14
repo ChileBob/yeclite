@@ -105,11 +105,11 @@
         "libxtst6",
         "libnss3"
       ],
-      "artifactName": "Zecwallet_Lite_${version}_${arch}.deb"
+      "artifactName": "YecLite_${version}_${arch}.deb"
     },
     "linux": {
       "category": "Development",
-      "icon": "./resources/icon.icns",
+      "icon": "./resources/icon.png",
       "target": [
         "deb",
         "AppImage"

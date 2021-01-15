@@ -43,9 +43,9 @@ const AddressBlock = ({
 
   const openAddress = () => {
     if (currencyName === 'TAZ') {
-      shell.openExternal(`https://chain.so/address/ZECTEST/${address}`);
+      shell.openExternal(`https://yecblockexplorer.com/tx/${address}`);
     } else {
-      shell.openExternal(`https://zcha.in/accounts/${address}`);
+      shell.openExternal(`https://yecblockexplorer.com/tx/${address}`);
     }
   };
 

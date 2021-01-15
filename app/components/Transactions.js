@@ -47,10 +47,10 @@ const TxModalInternal = ({ modalIsOpen, tx, closeModal, currencyName, zecPrice, 
   }
 
   const openTxid = () => {
-    if (currencyName === 'TAZ') {
-      shell.openExternal(`https://chain.so/tx/ZECTEST/${txid}`);
+    if (currencyName === 'TAY') {
+      shell.openExternal(`https://yecblockexplorer.com/tx/${txid}`);
     } else {
-      shell.openExternal(`https://zcha.in/transactions/${txid}`);
+      shell.openExternal(`https://yecblockexplorer.com/tx/${txid}`);
     }
   };
 

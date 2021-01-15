@@ -133,7 +133,7 @@ jobs:
           echo "$gpgbase64" | openssl base64 -d -out gpg.key
       - name: Import gpg key
         run: |
-          gpg --allow-secret-key-import --import gpg.key
+          gpg --allow-secret-key-import --import --no-tty --batch --yes gpg.key
           mkdir release
           cp windows-latest/* release/
           cp ubuntu-16.04/* release/

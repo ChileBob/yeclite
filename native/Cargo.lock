@@ -3100,7 +3100,7 @@ dependencies = [
 [[package]]
 name = "zecwalletlitelib"
 version = "0.1.0"
-source = "git+https://github.com/yecdev/yecshell?rev=d199cb71cd1f06e9c190dc1e10e2fc6bfde7a58e#d199cb71cd1f06e9c190dc1e10e2fc6bfde7a58e"
+source = "git+https://github.com/yecdev/yecshell?rev=ea5402816b8a257ec3ff5b5ef9b8b1f562ed47a3#ea5402816b8a257ec3ff5b5ef9b8b1f562ed47a3"
 dependencies = [
  "base58",
  "base64 0.12.3",

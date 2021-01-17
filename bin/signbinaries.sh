@@ -38,7 +38,7 @@ IFS=$'\n'
 
 for i in `find ./ -iname "YecLite*$APP_VERSION*" -o -iname "sha256sum-$APP_VERSION.txt"`; do
   echo "Signing" "$i"
-  gpg --no-tty --batch --yes --output "signatures/$i.sig" --detach-sig "$i"
+  echo $GPG_PASSPHRASE | gpg --pinentry-mode loopback --passphrase-fd 0 --batch --output "signatures/$i.sig" --detach-sig "$i"
 done
 
 cp sha256sum-$APP_VERSION.txt signatures/

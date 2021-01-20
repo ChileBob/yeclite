@@ -23,8 +23,8 @@ if [ -z $APP_VERSION ]; then echo "APP_VERSION is not set"; exit 1; fi
 
 # Store the hash and signatures here
 cd release
-rm -rf signatures
-mkdir signatures
+rm -rf signatures-$APP_VERSION
+mkdir signatures-$APP_VERSION
 
 # Remove previous signatures/hashes
 rm -f sha256sum-$APP_VERSION.txt
@@ -41,7 +41,7 @@ for i in `find ./ -iname "YecLite*$APP_VERSION*" -o -iname "sha256sum-$APP_VERSI
   echo $GPG_PASSPHRASE | gpg --pinentry-mode loopback --passphrase-fd 0 --batch --output "signatures/$i.sig" --detach-sig "$i"
 done
 
-cp sha256sum-$APP_VERSION.txt signatures/
-cp ../configs/SIGNATURES_README signatures/
+cp sha256sum-$APP_VERSION.txt signatures-$APP_VERSION/
+cp ../configs/SIGNATURES_README signatures-$APP_VERSION/
 
-zip -r signatures-$APP_VERSION.zip signatures/
+zip -r signatures-$APP_VERSION.zip signatures-$APP_VERSION/

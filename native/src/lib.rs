@@ -12,7 +12,7 @@ use zecwalletlitelib::{commands, lightclient::{LightClient, LightClientConfig}};
 
 pub const DEFAULT_WALLET_FILENAME: &str = "yeclite_wallet.dat";
 pub const DEFAULT_LOG_FILENAME: &str = "yeclite_debug.log";
-pub const DEFAULT_APP_DIR: &str = "yeclite";
+pub const DEFAULT_APP_DIR: &str = "YecLite";
 // We'll use a MUTEX to store a global lightclient instance,
 // so we don't have to keep creating it. We need to store it here, in rust
 // because we can't return such a complex structure back to JS

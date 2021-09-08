@@ -100,7 +100,7 @@ const TxModalInternal = ({ modalIsOpen, tx, closeModal, currencyName, zecPrice, 
           {type === 'sent' && (
             <div>
               <div className={[cstyles.sublight].join(' ')}>Fees</div>
-              <div>ZEC {Utils.maxPrecisionTrimmed(fees)}</div>
+              <div>YEC {Utils.maxPrecisionTrimmed(fees)}</div>
             </div>
           )}
 

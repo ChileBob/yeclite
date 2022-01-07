@@ -240,7 +240,7 @@ export default class RouteApp extends React.Component<Props, AppState> {
 
     // If there is no 'from' address, we'll set a default one
     if (!sendPageState.fromaddr) {
-      // Find a z-address with the highest balance
+      // Find a y-address with the highest balance
       const defaultAB = addressesWithBalance
         .filter(ab => Utils.isSapling(ab.address))
         .reduce((prev, ab) => {

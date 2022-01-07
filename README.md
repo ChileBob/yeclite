@@ -1,6 +1,6 @@
 ## YecLite
 
-YecLite is z-Addr first, Sapling compatible lightwallet client for Ycash. It has full support for all Ycash features:
+YecLite is y-Addr first, Sapling compatible lightwallet client for Ycash. It has full support for all Ycash features:
 
 - Send + Receive fully shielded transactions
 - Supports transparent addresses and transactions
@@ -15,7 +15,7 @@ Download compiled binaries from our [release page](https://github.com/yecdev/yec
 
 - While all the keys and transaction detection happens on the client, the server can learn what blocks contain your shielded transactions.
 - The server also learns other metadata about you like your ip address etc...
-- Also remember that t-addresses don't provide any privacy protection.
+- Also remember that s-addresses don't provide any privacy protection.
 
 ### Note Management
 

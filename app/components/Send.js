@@ -136,7 +136,7 @@ const ToAddrBox = ({
 
         <Spacer />
 
-        {isMemoDisabled && <div className={cstyles.sublight}>Memos only for z-addresses</div>}
+        {isMemoDisabled && <div className={cstyles.sublight}>Memos only for y-addresses</div>}
 
         {!isMemoDisabled && (
           <div>
